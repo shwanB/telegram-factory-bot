@@ -1,4 +1,4 @@
- import telebot
+import telebot
 from telebot.types import InlineKeyboardMarkup, InlineKeyboardButton, WebAppInfo, LabeledPrice
 import requests
 import threading
