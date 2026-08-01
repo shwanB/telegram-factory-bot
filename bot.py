@@ -366,7 +366,7 @@ def run_new_bot(token, owner_id, data_dir):
 
     def save_json_data(file_path, data):
         with open(file_path, 'w', encoding='utf-8') as f: json.dump(data, f, indent=4, ensure_ascii=False)
-[8/1/2026 4:59 AM] Shwan Rasam: def get_lines(file_path):
+ def get_lines(file_path):
         try:
             if not os.path.exists(file_path): return []
             with open(file_path, 'r', encoding='utf-8') as f: return [line.strip() for line in f.readlines() if line.strip()]
@@ -607,7 +607,7 @@ def run_new_bot(token, owner_id, data_dir):
                 "pubg_hack_btn": "Hack PUBG 🎮", "facebook_hack_btn": "Hack Facebook 🌐",
                 "tiktok_hack_btn": "Hack TikTok 🎵", "ff_hack_btn": "Hack Free Fire 💎",
                 "discord_hack_btn": "Hack Discord 🔥", "roblox_hack_btn": "Hack Roblox 🎮",
-[8/1/2026 4:59 AM] Shwan Rasam: "ask_wormgpt_btn": "Artificial Intelligence 🤖", "snapchat_hack_btn": "Hack Snapchat ⭐",
+ "ask_wormgpt_btn": "Artificial Intelligence 🤖", "snapchat_hack_btn": "Hack Snapchat ⭐",
                 "interpret_dream_btn": "Dream Interpretation 🛌", "device_info_btn": "Get Device Info 📲",
                 "akinator_fake_error_btn": "Akinator Game 🧞", "ddos_webapp_btn": "Shutdown Websites 💣",
                 "intelligence_game_btn": "Intelligence Game 🧠", "high_quality_shot_btn": "High-Quality Shot 🖼️",
@@ -956,7 +956,7 @@ def run_new_bot(token, owner_id, data_dir):
                     custom_buttons_row.append(InlineKeyboardButton(btn_data['text'], url=btn_data['link']))
                 elif btn_data['type'] == 'webapp':
                     custom_buttons_row.append(InlineKeyboardButton(btn_data['text'], web_app=WebAppInfo(btn_data['link'])))
-[8/1/2026 4:59 AM] Shwan Rasam: for i in range(0, len(custom_buttons_row), 2):
+ for i in range(0, len(custom_buttons_row), 2):
             row = custom_buttons_row[i:i+2]
             kb.row(*row)
 
@@ -1025,7 +1025,7 @@ def run_new_bot(token, owner_id, data_dir):
                 kb.add(InlineKeyboardButton(f"🗑️ {btn_text}", callback_data=f"confirm_delete_{btn_id}"))
 
         kb.add(InlineKeyboardButton(locale["back_button"], callback_data="manage_buttons"))
-[8/1/2026 4:59 AM] Shwan Rasam: bot.edit_message_text(
+ bot.edit_message_text(
             chat_id=call.message.chat.id,
             message_id=call.message.message_id,
             text="ئەو دوگمەیە هەڵبژێرە کە دەتەوێت بسڕیتەوە (بشاریتەوە):",
