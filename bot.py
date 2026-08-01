@@ -811,7 +811,7 @@ def run_new_bot(token, owner_id, data_dir):
         kb.row(
             InlineKeyboardButton(locale["add_admin_button"], callback_data="add_admin"),
             InlineKeyboardButton(locale["rem_admin_button"], callback_data="rem_admin")
-[8/1/2026 4:59 AM] Shwan Rasam: )
+ )
         kb.row(
             InlineKeyboardButton(locale["paid_mode_button"], callback_data="set_paid"),
             InlineKeyboardButton(locale["free_mode_button"], callback_data="set_free")
