@@ -1188,7 +1188,7 @@ def run_new_bot(token, owner_id, data_dir):
     def save_payment_method(message):
         user_id = str(message.from_user.id)
         state = get_state(user_id)
-[8/1/2026 4:59 AM] Shwan Rasam: try:
+
             price = float(message.text.strip())
         except ValueError:
             bot.reply_to(message, "❌ نرخەکە نادروستە. تکایە تەنها ژمارە بنێرە.")
