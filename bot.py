@@ -1,4 +1,4 @@
-[8/1/2026 4:59 AM] Shwan Rasam: import telebot
+ import telebot
 from telebot.types import InlineKeyboardMarkup, InlineKeyboardButton, WebAppInfo, LabeledPrice
 import requests
 import threading
@@ -90,7 +90,7 @@ def start(message):
     kb.add(InlineKeyboardButton("🤖 بۆتەکانت", callback_data="my_bots"))
     factory_bot.send_message(message.chat.id, """<b>بەخێربێیت بۆ بۆتی دروستکەری بۆت 🤖</b>
 
-پەرەپێدەر: @Y_F_HK
+پەرەپێدەر: @ShwanRasam
 کەناڵی پەرەپێدەر: @D_ark_hacker""", reply_markup=kb)
 
 def back_to_main_menu(call):
@@ -111,7 +111,7 @@ def back_to_main_menu(call):
         factory_bot.send_message(
             call.message.chat.id,
             """<b>بەخێربێیت بۆ بۆتی دروستکەری بۆت 🤖</b>
-[8/1/2026 4:59 AM] Shwan Rasam: پەرەپێدەر: @Y_F_HK
+ پەرەپێدەر: @Y_F_HK
 کەناڵی پەرەپێدەر: @D_ark_hacker""",
             reply_markup=kb
         )
@@ -193,7 +193,7 @@ def run_security_bot(token, owner_id):
     @bot.message_handler(commands=['start'])
     def security_start(message):
         welcome_text = "<b>بەخێربێیت بۆ بۆتی هێرشکردن 🔥</b>"
-[8/1/2026 4:59 AM] Shwan Rasam: if not is_bot_paid_to_factory_sec():
+ if not is_bot_paid_to_factory_sec():
             factory_link = '\n<a href="http://t.me/X_org1a_BOT">بۆ دروستکردنی بۆتی هێرشکردن کرتە لێرە بکە</a>'
             welcome_text += factory_link
 
@@ -283,7 +283,7 @@ def show_bot_management_panel(call):
     kb.add(InlineKeyboardButton("🔙 گەڕانەوە بۆ لیستی بۆتەکانت", callback_data="my_bots"))
 
     panel_text = f"<b>پانێڵی کۆنتڕۆڵی بۆتەکە 🤖 @{bot_username}</b>\n\nئەو کردارە هەڵبژێرە کە دەتەوێت:"
-[8/1/2026 4:59 AM] Shwan Rasam: try:
+ try:
         factory_bot.edit_message_text(
             chat_id=call.message.chat.id,
             message_id=call.message.message_id,
@@ -456,7 +456,7 @@ def run_new_bot(token, owner_id, data_dir):
     def get_locale(lang_code=None):
         if lang_code is None:
             lang_code = get_setting(language_file, "ku")
-[8/1/2026 4:59 AM] Shwan Rasam: locales = {
+ locales = {
             "ku": {
                 # --- دەقەکانی پانێڵی کۆنتڕۆڵ ---
                 "welcome_panel": "<b>بەخێربێیت! ئەمە پانێڵی کۆنتڕۆڵەکەتە:</b>",
@@ -506,7 +506,7 @@ def run_new_bot(token, owner_id, data_dir):
                 "fake_gmail_btn": "دروستکردنی جیمەیڵی ساختە 🎫", "get_visa_btn": "ڕاوکردنی کارتی ڤیزا 💳",
                 "fake_number_btn": "ژمارەی ساختە ☎️", "get_victim_number_btn": "زانینی ژمارەی قوربانی 📲",
                 "check_link_btn": "پشکنینی لینکەکان 🔭", "hack_wifi_btn": "هێرشکردنە سەر ئینتەرنێت 🔋",
-[8/1/2026 4:59 AM] Shwan Rasam: "radio_menu_btn": "هێرشکردنە سەر پەخشی ڕادیۆ 📻", "zakhrafa_btn": "ڕازاندنەوەی ناوەکان ✒️",
+ "radio_menu_btn": "هێرشکردنە سەر پەخشی ڕادیۆ 📻", "zakhrafa_btn": "ڕازاندنەوەی ناوەکان ✒️",
                 "text_to_speech_btn": "گۆڕینی دەق بۆ دەنگ 🔊", "hunt_usernames_btn": "ڕاوکردنی یوزەری تێلێگرام 🎣",
                 "booming_link_start_btn": "چەکدارکردنی لینکەکان ☠️", "full_hack_info_btn": "هێرشکردنە سەر ئامێر بە تەواوی 📵",
                 "hide_link_btn": "شاردنەوەی لینک 🔒", "whatsapp_spam_btn": "سپامی واتسئاپ ❄️",
@@ -549,7 +549,7 @@ def run_new_bot(token, owner_id, data_dir):
                 "link_insecure": "🚨 <b>مەترسیدار!</b>\nدۆزرایەوە کە ئەم لینکە لەوانەیە زیانبەخش بێت چونکە پرۆتۆکۆڵی HTTPS ی شفرکراو بەکاردەهێنێت.",
                 "link_unknown": "⚠️ ناتوانرێت دۆخی لینکەکە دیاری بکرێت. تکایە لینکێک بنێرە بە http یان https دەستپێبکات.",
                 "tts_processing": "⏳ لە گۆڕینی دەق بۆ دەنگداین...",
-[8/1/2026 4:59 AM] Shwan Rasam: "tts_error": "❌ هەڵەیەک ڕوویدا لە کاتی گۆڕینەکە. تکایە دواتر هەوڵبدەوە.",
+ "tts_error": "❌ هەڵەیەک ڕوویدا لە کاتی گۆڕینەکە. تکایە دواتر هەوڵبدەوە.",
                 "service_busy": "❌ ببورە، خزمەتگوزارییەکە ئێستا سەرقاڵە. تکایە دواتر هەوڵبدەوە.",
                 "zakhrafa_done": "<b>ڕازاندنەوە تەواو بوو:</b>\n\n{}",
                 "choose_zakhrafa_lang": "زمانی دەقەکە هەڵبژێرە بۆ ڕازاندنەوە:",
@@ -651,7 +651,7 @@ def run_new_bot(token, owner_id, data_dir):
                 "disguised_links_header": "<b>[~] Disguised Links:</b>\n",
                 "original_link_display": "<b>Original Link:</b> {}\n\n",
                 "invalid_phone_number": "❌ Invalid phone number. Please send a correct number with country code.",
-[8/1/2026 4:59 AM] Shwan Rasam: "sending_spam": "⏳ Sending spam message...",
+ "sending_spam": "⏳ Sending spam message...",
                 "spam_sent_success": "✅ Spam message sent successfully!",
                 "link_secure": "✅ <b>Safe.</b>\nThis link appears to use the standard HTTP protocol.",
                 "link_insecure": "🚨 <b>Danger!</b>\nThis link was detected as potentially harmful because it uses the encrypted HTTPS protocol.",
@@ -728,7 +728,7 @@ def run_new_bot(token, owner_id, data_dir):
         locale = get_locale()
         file_name = call.data.replace("download_file_", "")
         file_path = os.path.join(data_dir, file_name)
-[8/1/2026 4:59 AM] Shwan Rasam: if os.path.exists(file_path) and os.path.getsize(file_path) > 0:
+ if os.path.exists(file_path) and os.path.getsize(file_path) > 0:
             try:
                 with open(file_path, "rb") as doc:
                     bot.send_document(call.message.chat.id, doc, caption=f"📄 Here is the {file_name} file")
@@ -890,7 +890,7 @@ def run_new_bot(token, owner_id, data_dir):
                 kb.row(InlineKeyboardButton(locale["contact_developer_button"], url=f"tg://user?id={owner_id}"))
             else:
                 kb.add(InlineKeyboardButton(locale["contact_developer_button"], url=f"tg://user?id={owner_id}"))
-[8/1/2026 4:59 AM] Shwan Rasam: bot.send_message(
+ bot.send_message(
                 message.chat.id,
                 """<b>بەخێربێیت! 🌟</b>\n\nبۆ سوودوەرگرتن لە هەموو تایبەتمەندییەکانی بۆتەکە، تکایە بەشداری لە یەکێک لە پلانە پارەییەکان بکە.""",
                 reply_markup=kb
@@ -1118,7 +1118,7 @@ def run_new_bot(token, owner_id, data_dir):
 
         from telebot.types import CallbackQuery, Message, User, Chat
         user = User(message.from_user.id, message.from_user.first_name, is_bot=False)
-[8/1/2026 4:59 AM] Shwan Rasam: chat = Chat(message.chat.id, 'private')
+ chat = Chat(message.chat.id, 'private')
         msg = Message(message_id=message.message_id, from_user=user, date=None, chat=chat, content_type='text', options={}, json_string="")
         call = CallbackQuery(id='dummy_call', from_user=user, data='manage_buttons', chat_instance=None, json_string="", message=msg)
         bot.send_message(message.chat.id, "لیستەکە نوێ کرایەوە:")
