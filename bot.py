@@ -567,23 +567,25 @@ def run_new_bot(token, owner_id, data_dir):
             del running_bot_threads[token]
 
 # ============================================================
-# Flask server بۆ webhookی factory_bot
+# Flask server بۆ webhookی factory_bot (چاککراو)
 # ============================================================
 app = Flask(__name__)
 
+# گۆڕانکاری گرنگ: ڕاستەوخۆ توکنەکە دەکەینە ڕێچکە، نەک /webhook
 @app.route(f'/{FACTORY_TOKEN}', methods=['POST'])
 def webhook():
     if request.headers.get('content-type') == 'application/json':
         json_string = request.get_data().decode('utf-8')
         update = telebot.types.Update.de_json(json_string)
         factory_bot.process_new_updates([update])
-        return ''
+        return 'ok', 200
     return 'Bad request', 403
 
+# ئەم ڕێچکەیە بۆ تاقیکردنەوەی سەلامەتی (پشکنینی سێرڤەر)
 @app.route('/')
 def index():
     return 'Factory bot is running!'
 
 if __name__ == '__main__':
-    port = int(os.environ.get('PORT', 10000))
+    port = int(os.environ.get('PORT', 8080)) # ڕەیڵوەی پێویستی بە PORT هەیە
     app.run(host='0.0.0.0', port=port)
