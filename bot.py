@@ -16,7 +16,7 @@ from flask import Flask, request   # ← زیادکراوە
 # توکنەکەت لە @BotFather وەربگرە: /newbot
 # لە Render دایبنێ بە Environment Variable بە ناوی FACTORY_TOKEN
 FACTORY_TOKEN = os.environ.get("FACTORY_TOKEN")   # ← گۆڕدرا
-FACTORY_ADMIN_ID = 7924184194           # ← ئایدی تێلێگرامی خۆت لێرە دابنێ
+FACTORY_ADMIN_ID = 1015102519           # ← ئایدی تێلێگرامی خۆت لێرە دابنێ
 FACTORY_SUB_CHANNEL = "D_ark_hacker"    # ← کەناڵی بەشداریکردنی ناچاری
 # ============================================================
 
